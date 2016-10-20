@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/offer_icon"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        fresco:roundedCornerRadius="5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/offer_icon"
+        android:id="@+id/offer_title_text_view"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Тест текст" />
+
+    <TextView
+        android:id="@+id/weight_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="100 гр."
+        android:layout_toRightOf="@+id/offer_icon"
+        android:layout_below="@+id/offer_title_text_view" />
+
+    <Button
+        android:id="@+id/test_start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="12sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/more" />
+
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        android:text="129"
+        android:layout_toRightOf="@+id/offer_icon"
+        android:layout_below="@id/weight_text_view" />
+
+</RelativeLayout>

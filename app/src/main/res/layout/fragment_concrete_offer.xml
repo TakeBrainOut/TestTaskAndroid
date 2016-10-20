@@ -1,0 +1,84 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="testapp.vka.testmagapp.ConcreteOfferFragment">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardElevation="6dp"
+        card_view:cardUseCompatPadding="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/offer_image"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="300dp"
+                    android:layout_height="188dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/price_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="Цена" />
+
+                    <TextView
+                        android:id="@+id/weight_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/price_text_view"
+                        android:layout_marginLeft="16dp"
+                        android:text="ВЕС" />
+
+                    <Button
+                        android:id="@+id/test_start_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:text="@string/want" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:text="TEST TITLE" />
+
+                <TextView
+                    android:id="@+id/description_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Description" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+</FrameLayout>
